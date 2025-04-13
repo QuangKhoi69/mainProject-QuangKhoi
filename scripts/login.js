@@ -1,33 +1,23 @@
-// Get form element
-const loginForm = document.querySelector('form');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-
-// Add submit event listener to form
-loginForm.addEventListener('submit', function(event) {
+const login = (event) => {
     event.preventDefault();
-
-    // Get input values
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    // Basic validation
-    if (!email || !password) {
-        alert('Please fill in all fields');
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    if (!username || !password) {
+        alert("Please fill in all fields");
         return;
     }
 
-    // Basic email validation
-    if (!email.includes('@')) {
-        alert('Please enter a valid email address');
-        return;
-    }
+    let users = JSON.parse(localStorage.getItem("users"));
+    let storedUser = users[username];
 
-    // Basic password validation
-    if (password.length < 6) {
-        alert('Password must be at least 6 characters long');
-        return;
+    if (storedUser && storedUser.password === password) {
+        alert("Login successful");
+        window.location.href = "./index.html";
+    } else {
+        alert("Invalid username or password");
     }
+};
 
-    window.location.href = './index.html';
+document.getElementById("btn-signin").addEventListener('click', event => {
+    login(event);
 });
