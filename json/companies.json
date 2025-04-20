@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Tech Solutions",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Innovative tech solutions for modern businesses.",
+    "products": ["Software Development", "Cloud Services", "AI Solutions"],
+    "rating": 4.5,
+    "worth": 1200000000,
+    "industry": "Technology"
+  },
+  {
+    "name": "Global Innovations",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Leading the way in global business strategies.",
+    "products": ["Market Analysis", "Business Consulting", "Strategy Planning"],
+    "rating": 4.2,
+    "worth": 800000000,
+    "industry": "Consulting"
+  },
+  {
+    "name": "StartUp Inc",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Empowering startups with the tools they need to succeed.",
+    "products": ["Startup Funding", "Mentorship Programs", "Networking Events"],
+    "rating": 4.8,
+    "worth": 500000000,
+    "industry": "Venture Capital"
+  },
+  {
+    "name": "Eco Ventures",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Sustainable solutions for a greener future.",
+    "products": ["Renewable Energy", "Eco-friendly Products", "Sustainability Consulting"],
+    "rating": 4.6,
+    "worth": 900000000,
+    "industry": "Renewable Energy"
+  },
+  {
+    "name": "HealthTech Corp",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Innovations in healthcare technology.",
+    "products": ["Telemedicine", "Health Monitoring Devices", "Medical Software"],
+    "rating": 4.7,
+    "worth": 1500000000,
+    "industry": "Healthcare"
+  },
+  {
+    "name": "EduWorld",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Revolutionizing education for the digital age.",
+    "products": ["Online Courses", "Educational Apps", "Virtual Classrooms"],
+    "rating": 4.3,
+    "worth": 600000000,
+    "industry": "Education"
+  },
+  {
+    "name": "FinServe Group",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Comprehensive financial services for businesses.",
+    "products": ["Investment Banking", "Wealth Management", "Financial Advisory"],
+    "rating": 4.4,
+    "worth": 2100000000,
+    "industry": "Finance"
+  },
+  {
+    "name": "Retail Hub",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Connecting retailers with customers worldwide.",
+    "products": ["E-commerce Solutions", "Retail Analytics", "Customer Engagement Tools"],
+    "rating": 4.1,
+    "worth": 700000000,
+    "industry": "Retail"
+  },
+  {
+    "name": "TravelPro",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Your partner in unforgettable travel experiences.",
+    "products": ["Travel Packages", "Booking Services", "Travel Insurance"],
+    "rating": 4.5,
+    "worth": 1000000000,
+    "industry": "Travel"
+  },
+  {
+    "name": "Foodies United",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Bringing gourmet experiences to your doorstep.",
+    "products": ["Meal Kits", "Catering Services", "Cooking Classes"],
+    "rating": 4.6,
+    "worth": 400000000,
+    "industry": "Food & Beverage"
+  },
+  {
+    "name": "AutoTech",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Driving the future of automotive technology.",
+    "products": ["Electric Vehicles", "Autonomous Driving Systems", "Car Connectivity Solutions"],
+    "rating": 4.7,
+    "worth": 3000000000,
+    "industry": "Automotive"
+  },
+  {
+    "name": "MediaWorks",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Innovative media solutions for the digital age.",
+    "products": ["Content Creation", "Digital Marketing", "Media Planning"],
+    "rating": 4.3,
+    "worth": 500000000,
+    "industry": "Media"
+  },
+  {
+    "name": "GreenTech",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Pioneering green technology for a sustainable future.",
+    "products": ["Solar Panels", "Wind Turbines", "Energy Storage Solutions"],
+    "rating": 4.8,
+    "worth": 1800000000,
+    "industry": "Green Technology"
+  },
+  {
+    "name": "Fashion Forward",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Setting trends in the fashion industry.",
+    "products": ["Designer Clothing", "Fashion Accessories", "Personal Styling"],
+    "rating": 4.2,
+    "worth": 300000000,
+    "industry": "Fashion"
+  },
+  {
+    "name": "HomeSmart",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Smart home solutions for modern living.",
+    "products": ["Home Automation", "Security Systems", "Smart Appliances"],
+    "rating": 4.5,
+    "worth": 1100000000,
+    "industry": "Home Automation"
+  },
+  {
+    "name": "BioLife",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Advancing biotechnology for a healthier world.",
+    "products": ["Biopharmaceuticals", "Genetic Testing", "Biotech Research"],
+    "rating": 4.6,
+    "worth": 2500000000,
+    "industry": "Biotechnology"
+  },
+  {
+    "name": "Artistry",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Celebrating creativity and artistic expression.",
+    "products": ["Art Supplies", "Workshops", "Art Exhibitions"],
+    "rating": 4.4,
+    "worth": 200000000,
+    "industry": "Art"
+  },
+  {
+    "name": "TechSavvy",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Empowering businesses with cutting-edge technology.",
+    "products": ["IT Support", "Software Solutions", "Tech Consulting"],
+    "rating": 4.7,
+    "worth": 1900000000,
+    "industry": "IT Services"
+  },
+  {
+    "name": "Wellness Co",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Promoting health and wellness for all.",
+    "products": ["Fitness Programs", "Nutritional Supplements", "Wellness Retreats"],
+    "rating": 4.5,
+    "worth": 600000000,
+    "industry": "Wellness"
+  },
+  {
+    "name": "Urban Developments",
+    "logo": "https://via.placeholder.com/150",
+    "description": "Building the cities of tomorrow.",
+    "products": ["Real Estate Development", "Urban Planning", "Construction Services"],
+    "rating": 4.6,
+    "worth": 2200000000,
+    "industry": "Real Estate"
+  }
+]

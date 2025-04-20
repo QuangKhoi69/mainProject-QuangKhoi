@@ -1,4 +1,4 @@
-/* .hero-section {
+.hero-section {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -54,7 +54,7 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 } */
 
-/* .action-buttons-container {
+.action-buttons-container {
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -93,3 +93,49 @@
     font-size: 16px;
   }
 } */
+
+/* Styles for company container and button */
+.companies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.company-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: stretch;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
