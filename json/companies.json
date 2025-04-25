@@ -3,7 +3,26 @@
     "name": "Tech Solutions",
     "logo": "https://via.placeholder.com/150",
     "description": "Innovative tech solutions for modern businesses.",
-    "products": ["Software Development", "Cloud Services", "AI Solutions"],
+    "products": [
+      {
+        "name": "Software Development",
+        "price": 50000,
+        "rating": 4.8,
+        "description": "Custom software solutions tailored to your business needs."
+      },
+      {
+        "name": "Cloud Services",
+        "price": 30000,
+        "rating": 4.6,
+        "description": "Scalable cloud solutions for modern enterprises."
+      },
+      {
+        "name": "AI Solutions",
+        "price": 70000,
+        "rating": 4.9,
+        "description": "Advanced AI solutions to drive innovation."
+      }
+    ],
     "rating": 4.5,
     "worth": 1200000000,
     "industry": "Technology"
@@ -12,7 +31,26 @@
     "name": "Global Innovations",
     "logo": "https://via.placeholder.com/150",
     "description": "Leading the way in global business strategies.",
-    "products": ["Market Analysis", "Business Consulting", "Strategy Planning"],
+    "products": [
+      {
+        "name": "Market Analysis",
+        "price": 40000,
+        "rating": 4.3,
+        "description": "In-depth market analysis to drive business growth."
+      },
+      {
+        "name": "Business Consulting",
+        "price": 60000,
+        "rating": 4.5,
+        "description": "Expert business consulting services for strategic planning."
+      },
+      {
+        "name": "Strategy Planning",
+        "price": 55000,
+        "rating": 4.4,
+        "description": "Comprehensive strategy planning for business success."
+      }
+    ],
     "rating": 4.2,
     "worth": 800000000,
     "industry": "Consulting"
@@ -21,7 +59,26 @@
     "name": "StartUp Inc",
     "logo": "https://via.placeholder.com/150",
     "description": "Empowering startups with the tools they need to succeed.",
-    "products": ["Startup Funding", "Mentorship Programs", "Networking Events"],
+    "products": [
+      {
+        "name": "Startup Funding",
+        "price": 100000,
+        "rating": 4.9,
+        "description": "Funding solutions to kickstart your startup journey."
+      },
+      {
+        "name": "Mentorship Programs",
+        "price": 20000,
+        "rating": 4.7,
+        "description": "Guidance and mentorship from industry experts."
+      },
+      {
+        "name": "Networking Events",
+        "price": 15000,
+        "rating": 4.6,
+        "description": "Opportunities to connect with potential investors and partners."
+      }
+    ],
     "rating": 4.8,
     "worth": 500000000,
     "industry": "Venture Capital"
@@ -30,7 +87,26 @@
     "name": "Eco Ventures",
     "logo": "https://via.placeholder.com/150",
     "description": "Sustainable solutions for a greener future.",
-    "products": ["Renewable Energy", "Eco-friendly Products", "Sustainability Consulting"],
+    "products": [
+      {
+        "name": "Renewable Energy",
+        "price": 75000,
+        "rating": 4.7,
+        "description": "Innovative renewable energy solutions for sustainable living."
+      },
+      {
+        "name": "Eco-friendly Products",
+        "price": 35000,
+        "rating": 4.5,
+        "description": "Products designed with the environment in mind."
+      },
+      {
+        "name": "Sustainability Consulting",
+        "price": 50000,
+        "rating": 4.6,
+        "description": "Consulting services to enhance sustainability practices."
+      }
+    ],
     "rating": 4.6,
     "worth": 900000000,
     "industry": "Renewable Energy"
@@ -39,7 +115,26 @@
     "name": "HealthTech Corp",
     "logo": "https://via.placeholder.com/150",
     "description": "Innovations in healthcare technology.",
-    "products": ["Telemedicine", "Health Monitoring Devices", "Medical Software"],
+    "products": [
+      {
+        "name": "Telemedicine",
+        "price": 60000,
+        "rating": 4.8,
+        "description": "Remote healthcare services for convenient access."
+      },
+      {
+        "name": "Health Monitoring Devices",
+        "price": 45000,
+        "rating": 4.7,
+        "description": "Advanced devices for continuous health monitoring."
+      },
+      {
+        "name": "Medical Software",
+        "price": 70000,
+        "rating": 4.9,
+        "description": "Software solutions to streamline medical operations."
+      }
+    ],
     "rating": 4.7,
     "worth": 1500000000,
     "industry": "Healthcare"
@@ -48,7 +143,26 @@
     "name": "EduWorld",
     "logo": "https://via.placeholder.com/150",
     "description": "Revolutionizing education for the digital age.",
-    "products": ["Online Courses", "Educational Apps", "Virtual Classrooms"],
+    "products": [
+      {
+        "name": "Online Courses",
+        "price": 20000,
+        "rating": 4.4,
+        "description": "Comprehensive online courses for various subjects."
+      },
+      {
+        "name": "Educational Apps",
+        "price": 15000,
+        "rating": 4.3,
+        "description": "Interactive apps to enhance learning experiences."
+      },
+      {
+        "name": "Virtual Classrooms",
+        "price": 25000,
+        "rating": 4.5,
+        "description": "Virtual classroom solutions for remote education."
+      }
+    ],
     "rating": 4.3,
     "worth": 600000000,
     "industry": "Education"
@@ -57,7 +171,26 @@
     "name": "FinServe Group",
     "logo": "https://via.placeholder.com/150",
     "description": "Comprehensive financial services for businesses.",
-    "products": ["Investment Banking", "Wealth Management", "Financial Advisory"],
+    "products": [
+      {
+        "name": "Investment Banking",
+        "price": 100000,
+        "rating": 4.6,
+        "description": "Expert investment banking services for businesses."
+      },
+      {
+        "name": "Wealth Management",
+        "price": 80000,
+        "rating": 4.5,
+        "description": "Personalized wealth management solutions."
+      },
+      {
+        "name": "Financial Advisory",
+        "price": 60000,
+        "rating": 4.4,
+        "description": "Strategic financial advisory services."
+      }
+    ],
     "rating": 4.4,
     "worth": 2100000000,
     "industry": "Finance"
@@ -66,7 +199,26 @@
     "name": "Retail Hub",
     "logo": "https://via.placeholder.com/150",
     "description": "Connecting retailers with customers worldwide.",
-    "products": ["E-commerce Solutions", "Retail Analytics", "Customer Engagement Tools"],
+    "products": [
+      {
+        "name": "E-commerce Solutions",
+        "price": 50000,
+        "rating": 4.2,
+        "description": "Comprehensive e-commerce solutions for retailers."
+      },
+      {
+        "name": "Retail Analytics",
+        "price": 40000,
+        "rating": 4.1,
+        "description": "Analytics tools to enhance retail performance."
+      },
+      {
+        "name": "Customer Engagement Tools",
+        "price": 30000,
+        "rating": 4.3,
+        "description": "Tools to boost customer engagement and loyalty."
+      }
+    ],
     "rating": 4.1,
     "worth": 700000000,
     "industry": "Retail"
@@ -75,7 +227,26 @@
     "name": "TravelPro",
     "logo": "https://via.placeholder.com/150",
     "description": "Your partner in unforgettable travel experiences.",
-    "products": ["Travel Packages", "Booking Services", "Travel Insurance"],
+    "products": [
+      {
+        "name": "Travel Packages",
+        "price": 70000,
+        "rating": 4.6,
+        "description": "Curated travel packages for memorable experiences."
+      },
+      {
+        "name": "Booking Services",
+        "price": 20000,
+        "rating": 4.5,
+        "description": "Efficient booking services for hassle-free travel."
+      },
+      {
+        "name": "Travel Insurance",
+        "price": 15000,
+        "rating": 4.4,
+        "description": "Comprehensive travel insurance for peace of mind."
+      }
+    ],
     "rating": 4.5,
     "worth": 1000000000,
     "industry": "Travel"
@@ -84,7 +255,26 @@
     "name": "Foodies United",
     "logo": "https://via.placeholder.com/150",
     "description": "Bringing gourmet experiences to your doorstep.",
-    "products": ["Meal Kits", "Catering Services", "Cooking Classes"],
+    "products": [
+      {
+        "name": "Meal Kits",
+        "price": 30000,
+        "rating": 4.5,
+        "description": "Delicious meal kits delivered to your home."
+      },
+      {
+        "name": "Catering Services",
+        "price": 50000,
+        "rating": 4.6,
+        "description": "Professional catering services for events."
+      },
+      {
+        "name": "Cooking Classes",
+        "price": 20000,
+        "rating": 4.7,
+        "description": "Interactive cooking classes for all skill levels."
+      }
+    ],
     "rating": 4.6,
     "worth": 400000000,
     "industry": "Food & Beverage"
@@ -93,7 +283,26 @@
     "name": "AutoTech",
     "logo": "https://via.placeholder.com/150",
     "description": "Driving the future of automotive technology.",
-    "products": ["Electric Vehicles", "Autonomous Driving Systems", "Car Connectivity Solutions"],
+    "products": [
+      {
+        "name": "Electric Vehicles",
+        "price": 100000,
+        "rating": 4.8,
+        "description": "Innovative electric vehicles for a sustainable future."
+      },
+      {
+        "name": "Autonomous Driving Systems",
+        "price": 120000,
+        "rating": 4.9,
+        "description": "Advanced systems for autonomous driving."
+      },
+      {
+        "name": "Car Connectivity Solutions",
+        "price": 80000,
+        "rating": 4.7,
+        "description": "Connectivity solutions for modern vehicles."
+      }
+    ],
     "rating": 4.7,
     "worth": 3000000000,
     "industry": "Automotive"
@@ -102,7 +311,26 @@
     "name": "MediaWorks",
     "logo": "https://via.placeholder.com/150",
     "description": "Innovative media solutions for the digital age.",
-    "products": ["Content Creation", "Digital Marketing", "Media Planning"],
+    "products": [
+      {
+        "name": "Content Creation",
+        "price": 40000,
+        "rating": 4.4,
+        "description": "Creative content creation services for brands."
+      },
+      {
+        "name": "Digital Marketing",
+        "price": 50000,
+        "rating": 4.3,
+        "description": "Effective digital marketing strategies for growth."
+      },
+      {
+        "name": "Media Planning",
+        "price": 45000,
+        "rating": 4.2,
+        "description": "Strategic media planning for maximum impact."
+      }
+    ],
     "rating": 4.3,
     "worth": 500000000,
     "industry": "Media"
@@ -111,7 +339,26 @@
     "name": "GreenTech",
     "logo": "https://via.placeholder.com/150",
     "description": "Pioneering green technology for a sustainable future.",
-    "products": ["Solar Panels", "Wind Turbines", "Energy Storage Solutions"],
+    "products": [
+      {
+        "name": "Solar Panels",
+        "price": 60000,
+        "rating": 4.9,
+        "description": "High-efficiency solar panels for clean energy."
+      },
+      {
+        "name": "Wind Turbines",
+        "price": 80000,
+        "rating": 4.8,
+        "description": "Advanced wind turbines for renewable energy."
+      },
+      {
+        "name": "Energy Storage Solutions",
+        "price": 70000,
+        "rating": 4.7,
+        "description": "Innovative energy storage solutions for sustainability."
+      }
+    ],
     "rating": 4.8,
     "worth": 1800000000,
     "industry": "Green Technology"
@@ -120,7 +367,26 @@
     "name": "Fashion Forward",
     "logo": "https://via.placeholder.com/150",
     "description": "Setting trends in the fashion industry.",
-    "products": ["Designer Clothing", "Fashion Accessories", "Personal Styling"],
+    "products": [
+      {
+        "name": "Designer Clothing",
+        "price": 50000,
+        "rating": 4.3,
+        "description": "Exclusive designer clothing for fashion enthusiasts."
+      },
+      {
+        "name": "Fashion Accessories",
+        "price": 20000,
+        "rating": 4.2,
+        "description": "Trendy fashion accessories to complement your style."
+      },
+      {
+        "name": "Personal Styling",
+        "price": 30000,
+        "rating": 4.4,
+        "description": "Personal styling services for a unique look."
+      }
+    ],
     "rating": 4.2,
     "worth": 300000000,
     "industry": "Fashion"
@@ -129,7 +395,26 @@
     "name": "HomeSmart",
     "logo": "https://via.placeholder.com/150",
     "description": "Smart home solutions for modern living.",
-    "products": ["Home Automation", "Security Systems", "Smart Appliances"],
+    "products": [
+      {
+        "name": "Home Automation",
+        "price": 60000,
+        "rating": 4.6,
+        "description": "Advanced home automation solutions for convenience."
+      },
+      {
+        "name": "Security Systems",
+        "price": 50000,
+        "rating": 4.5,
+        "description": "Reliable security systems for home safety."
+      },
+      {
+        "name": "Smart Appliances",
+        "price": 40000,
+        "rating": 4.4,
+        "description": "Innovative smart appliances for modern homes."
+      }
+    ],
     "rating": 4.5,
     "worth": 1100000000,
     "industry": "Home Automation"
@@ -138,7 +423,26 @@
     "name": "BioLife",
     "logo": "https://via.placeholder.com/150",
     "description": "Advancing biotechnology for a healthier world.",
-    "products": ["Biopharmaceuticals", "Genetic Testing", "Biotech Research"],
+    "products": [
+      {
+        "name": "Biopharmaceuticals",
+        "price": 90000,
+        "rating": 4.7,
+        "description": "Cutting-edge biopharmaceuticals for health improvement."
+      },
+      {
+        "name": "Genetic Testing",
+        "price": 70000,
+        "rating": 4.6,
+        "description": "Comprehensive genetic testing services."
+      },
+      {
+        "name": "Biotech Research",
+        "price": 80000,
+        "rating": 4.8,
+        "description": "Innovative research in biotechnology."
+      }
+    ],
     "rating": 4.6,
     "worth": 2500000000,
     "industry": "Biotechnology"
@@ -147,7 +451,26 @@
     "name": "Artistry",
     "logo": "https://via.placeholder.com/150",
     "description": "Celebrating creativity and artistic expression.",
-    "products": ["Art Supplies", "Workshops", "Art Exhibitions"],
+    "products": [
+      {
+        "name": "Art Supplies",
+        "price": 20000,
+        "rating": 4.5,
+        "description": "High-quality art supplies for artists."
+      },
+      {
+        "name": "Workshops",
+        "price": 15000,
+        "rating": 4.4,
+        "description": "Interactive workshops for creative learning."
+      },
+      {
+        "name": "Art Exhibitions",
+        "price": 25000,
+        "rating": 4.6,
+        "description": "Exhibitions showcasing artistic talent."
+      }
+    ],
     "rating": 4.4,
     "worth": 200000000,
     "industry": "Art"
@@ -156,7 +479,26 @@
     "name": "TechSavvy",
     "logo": "https://via.placeholder.com/150",
     "description": "Empowering businesses with cutting-edge technology.",
-    "products": ["IT Support", "Software Solutions", "Tech Consulting"],
+    "products": [
+      {
+        "name": "IT Support",
+        "price": 50000,
+        "rating": 4.6,
+        "description": "Reliable IT support services for businesses."
+      },
+      {
+        "name": "Software Solutions",
+        "price": 70000,
+        "rating": 4.7,
+        "description": "Custom software solutions for business needs."
+      },
+      {
+        "name": "Tech Consulting",
+        "price": 60000,
+        "rating": 4.5,
+        "description": "Expert tech consulting services for growth."
+      }
+    ],
     "rating": 4.7,
     "worth": 1900000000,
     "industry": "IT Services"
@@ -165,7 +507,26 @@
     "name": "Wellness Co",
     "logo": "https://via.placeholder.com/150",
     "description": "Promoting health and wellness for all.",
-    "products": ["Fitness Programs", "Nutritional Supplements", "Wellness Retreats"],
+    "products": [
+      {
+        "name": "Fitness Programs",
+        "price": 30000,
+        "rating": 4.5,
+        "description": "Comprehensive fitness programs for all levels."
+      },
+      {
+        "name": "Nutritional Supplements",
+        "price": 20000,
+        "rating": 4.4,
+        "description": "High-quality supplements for optimal health."
+      },
+      {
+        "name": "Wellness Retreats",
+        "price": 50000,
+        "rating": 4.6,
+        "description": "Relaxing retreats for wellness and rejuvenation."
+      }
+    ],
     "rating": 4.5,
     "worth": 600000000,
     "industry": "Wellness"
@@ -174,7 +535,26 @@
     "name": "Urban Developments",
     "logo": "https://via.placeholder.com/150",
     "description": "Building the cities of tomorrow.",
-    "products": ["Real Estate Development", "Urban Planning", "Construction Services"],
+    "products": [
+      {
+        "name": "Real Estate Development",
+        "price": 100000,
+        "rating": 4.7,
+        "description": "Comprehensive real estate development services."
+      },
+      {
+        "name": "Urban Planning",
+        "price": 80000,
+        "rating": 4.6,
+        "description": "Strategic urban planning for sustainable cities."
+      },
+      {
+        "name": "Construction Services",
+        "price": 90000,
+        "rating": 4.8,
+        "description": "Reliable construction services for urban projects."
+      }
+    ],
     "rating": 4.6,
     "worth": 2200000000,
     "industry": "Real Estate"
