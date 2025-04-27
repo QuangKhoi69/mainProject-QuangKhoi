@@ -10,7 +10,7 @@ const register = (event) => {
     lowerCase = /[a-z]/g;
     upperCase = /[A-Z]/g;
     number = /[0-9]/g;
-    email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!username || !email || !password || !confirmPassword) {
         alert("Please fill in all fields");
@@ -32,6 +32,11 @@ const register = (event) => {
         return;
     }
 
+    if (!emailRegex.test(email)) {
+        alert("Invalid email format");
+        return;
+    }
+
     let user = {
         username: username,
         email: email,
@@ -47,10 +52,10 @@ const register = (event) => {
         users[username] = user;
         localStorage.setItem("users", JSON.stringify(users));
         alert("Registration successful");
-        window.location.href = "./main.html";
+        window.location.href = "./index.html";
     }
     }
 
-document.getElementById("btn-signup").addEventListener('click', register) = (event) => {
+document.querySelector(".btn-signup").addEventListener('click', event => {
     register(event);
-};
+});

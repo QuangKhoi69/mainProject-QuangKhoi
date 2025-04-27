@@ -43,8 +43,16 @@ fetch('./json/companies.json')
           <p>Rating: ${company.rating}</p>
           <p>Worth: $${company.worth.toLocaleString()}</p>
         `;
+      //View details button
+        const detailsButton = document.createElement('button');
+        detailsButton.textContent = 'View Details';
+        detailsButton.onclick = () => {
+          localStorage.setItem('selectedCompany', JSON.stringify(company));
+          window.location.href = './details.html';
+        };
+        companyDiv.appendChild(detailsButton);
         searchResults.appendChild(companyDiv);
       });
     }
   })
-  .catch(error => console.error('Error fetching company data:', error));
+.catch(error => console.error('Error fetching company data:', error));

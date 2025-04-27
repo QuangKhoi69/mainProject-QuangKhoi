@@ -18,20 +18,26 @@
       <a href="./products.html" class="active">Products</a>
       <a href="./businesses.html">Businesses</a>
       <a href="./support.html">Support</a>
-      <a href="./search.html" class="fa-solid fa-magnifying-glass">Search</a>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div id="avatar-action-container">
+        <a href="./login.html" class="btn-signin">Sign In</a>
+        <a href="#" class="btn-signout" style="display: none;">Sign Out</a>
+      </div>
     </nav>
   </div>
   <main>
+    <section class="sorting-section">
+      <h2>Sort Products</h2>
+      <button id="sort-rating">Sort by Rating</button>
+      <button id="sort-price">Sort by Price</button>
+    </section>
     <section class="products-section">
-      <h2>Our Products</h2>
-      <div class="products-grid">
-        <!-- Products will be dynamically inserted here -->
-      </div>
+      <div class="products-grid"></div>
     </section>
   </main>
-  <footer>
-    <p>Copyright &copy; Business Central Center</p>
-  </footer>
   <script type="module" src="./scripts/products.js"></script>
 </body>
 </html>

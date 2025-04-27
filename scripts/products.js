@@ -1,25 +1,38 @@
-import productsData from '../json/companies.json' assert { type: 'json' };
+fetch('./json/companies.json')
+  .then(response => response.json())
+  .then(companies => {
+    const productsGrid = document.querySelector('.products-grid');
 
-const productsGrid = document.querySelector('.products-grid');
+    const allProducts = companies.flatMap(company => company.products.map(product => ({
+      ...product,
+      companyName: company.name
+    })));
 
-// Flatten the products from all companies into a single array
-const allProducts = productsData.flatMap(company => company.products.map(product => ({
-  ...product,
-  companyName: company.name
-})));
+    const displayProducts = (products) => {
+      productsGrid.innerHTML = '';
+      products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+        productCard.innerHTML = `
+          <h3>${product.name}</h3>
+          <p>Company: ${product.companyName}</p>
+          <p>Rating: ${product.rating}</p>
+          <p>Price: $${product.price}</p>
+        `;
+        productsGrid.appendChild(productCard);
+      });
+    };
 
-// Sort products by rating first, then by price
-allProducts.sort((a, b) => b.rating - a.rating || a.price - b.price);
+    displayProducts(allProducts);
 
-// Create product cards and append to the grid
-allProducts.forEach(product => {
-  const productCard = document.createElement('div');
-  productCard.classList.add('product-card');
-  productCard.innerHTML = `
-    <h3>${product.name}</h3>
-    <p>Price: $${product.price}</p>
-    <p>Rating: ${product.rating}</p>
-    <p>Company: ${product.companyName}</p>
-  `;
-  productsGrid.appendChild(productCard);
-});
+    document.getElementById('sort-rating').addEventListener('click', () => {
+      const sortedByRating = [...allProducts].sort((a, b) => b.rating - a.rating);
+      displayProducts(sortedByRating);
+    });
+
+    document.getElementById('sort-price').addEventListener('click', () => {
+      const sortedByPrice = [...allProducts].sort((a, b) => a.price - b.price);
+      displayProducts(sortedByPrice);
+    });
+  })
+  .catch(error => console.error('Error fetching product data:', error));
