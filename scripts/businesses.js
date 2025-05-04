@@ -21,6 +21,8 @@ fetch('./json/companies.json')
         // Add a button to view details
         const detailsButton = document.createElement('button');
         detailsButton.textContent = 'View Details';
+        // CSS for button
+        detailsButton.classList.add('details-button');
         detailsButton.onclick = () => {
           localStorage.setItem('selectedCompany', JSON.stringify(company));
           window.location.href = './details.html';

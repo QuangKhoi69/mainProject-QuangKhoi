@@ -9,7 +9,12 @@ if (selectedCompany) {
   const productsList = document.getElementById('company-products');
   selectedCompany.products.forEach(product => {
     const listItem = document.createElement('li');
-    listItem.textContent = product;
+    listItem.innerHTML = `
+      <strong>${product.name}</strong><br>
+      Price: $${product.price.toLocaleString()}<br>
+      Rating: ${product.rating}<br>
+      Description: ${product.description}
+    `;
     productsList.appendChild(listItem);
   });
 } else {

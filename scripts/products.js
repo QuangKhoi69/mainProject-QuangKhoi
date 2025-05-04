@@ -19,6 +19,16 @@ fetch('./json/companies.json')
           <p>Rating: ${product.rating}</p>
           <p>Price: $${product.price}</p>
         `;
+
+        const detailsButton = document.createElement('button');
+        detailsButton.textContent = 'View Details';
+        detailsButton.classList.add('details-button');
+        detailsButton.onclick = () => {
+          localStorage.setItem('selectedProduct', JSON.stringify(product));
+          window.location.href = './productsdetails.html';
+        };
+        productCard.appendChild(detailsButton);
+
         productsGrid.appendChild(productCard);
       });
     };
