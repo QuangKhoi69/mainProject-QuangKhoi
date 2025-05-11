@@ -6,6 +6,8 @@
   <title>Product Details</title>
   <link rel="stylesheet" href="./styles/productsdetails.css">
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
   <div class="navbar">
@@ -16,12 +18,16 @@
     <nav class="nav-links">
       <a href="./index.html">Home</a>
       <a href="./products.html">Products</a>
-      <a href="./businesses.html" class="active">Businesses</a>
+      <a href="./businesses.html">Businesses</a>
       <a href="./support.html">Support</a>
       <div class="search-container">
         <input type="text" placeholder="Search...">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
+      <a href="./cart.html" class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </a>
       <div id="avatar-action-container">
         <a href="./login.html" class="btn-signin">Sign In</a>
         <a href="#" class="btn-signout" style="display: none;">Sign Out</a>
@@ -56,5 +62,6 @@
     </div>
   </div>
   <script type="module" src="./scripts/productsdetails.js"></script>
+  <script type="module" src="./scripts/cart.js"></script>
 </body>
 </html>

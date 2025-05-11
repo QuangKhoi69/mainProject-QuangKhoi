@@ -1,22 +1,71 @@
-// Retrieve the selected product from localStorage
-const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+import cart from './cart.js';
 
-if (selectedProduct) {
-  document.getElementById('products-name').textContent = selectedProduct.name;
-  document.getElementById('products-price').textContent = `Price: $${selectedProduct.price.toLocaleString()}`;
-  document.getElementById('products-rating').textContent = `Rating: ${selectedProduct.rating}`;
-  document.getElementById('products-description').textContent = selectedProduct.description;
-} else {
-  document.body.innerHTML = '<p>No product selected. Please go back and select a product.</p>';
+// Get product details from URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+
+let currentProduct = null; // <--- Thêm biến toàn cục này
+
+function getProductFromLocalStorage() {
+  const products = JSON.parse(localStorage.getItem('selectedProduct'));
+  if (products && products.id == productId) {
+    return products;
+  }
+  return null;
 }
 
-selectedProduct.products.forEach(product => {
-  const listItem = document.createElement('li');
-  listItem.innerHTML = `
-    <strong>${product.name}</strong><br>
-    Price: $${product.price.toLocaleString()}<br>
-    Rating: ${product.rating}<br>
-    Description: ${product.description}
-  `;
-  productsList.appendChild(listItem);
+// Fetch product details
+async function fetchProductDetails() {
+  try {
+    const response = await fetch(`/api/products/${productId}`);
+    const product = await response.json();
+    currentProduct = product; // <--- Lưu lại sản phẩm
+    displayProductDetails(product);
+  } catch (error) {
+    // Nếu fetch lỗi, lấy từ localStorage
+    const localProduct = getProductFromLocalStorage();
+    if (localProduct) {
+      currentProduct = localProduct;
+      displayProductDetails(localProduct);
+    } else {
+      alert('Không tìm thấy thông tin sản phẩm!');
+    }
+  }
+}
+
+function displayProductDetails(product) {
+  document.getElementById('products-name').textContent = product.name;
+  document.getElementById('products-price').textContent = `$${product.price}`;
+  document.getElementById('products-rating').textContent = `Rating: ${product.rating}/5`;
+  document.getElementById('products-description').textContent = product.description;
+}
+
+// Handle form submission
+document.getElementById('transaction-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const email = document.getElementById('email').value;
+  const address = document.getElementById('address').value;
+  const payment = document.getElementById('payment').value;
+
+  // Lấy sản phẩm từ biến toàn cục, không lấy từ DOM
+  if (!currentProduct) {
+    alert('Product information is not loaded yet!');
+    return;
+  }
+
+  cart.addItem({
+    id: String(currentProduct.id),
+    name: currentProduct.name,
+    price: currentProduct.price,
+    quantity: 1
+  });
+
+  alert('Product added to cart successfully!');
+  
+  // Redirect to cart page
+  window.location.href = './cart.html';
 });
+
+// Initialize page
+fetchProductDetails();

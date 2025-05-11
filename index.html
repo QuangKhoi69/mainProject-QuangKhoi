@@ -25,6 +25,7 @@
 
   <link rel="stylesheet" href="./styles/main.css"/>
   <link rel="stylesheet" href="./styles/home.css"/>
+  <link rel="stylesheet" href="./styles/cart.css"/>
 
 </head>
 
@@ -46,6 +47,10 @@
       <a href="./businesses.html">Businesses</a>
       <a href="./support.html">Support</a>
       <button onclick="window.location.href='./search.html'" class="fa-solid fa-magnifying-glass">Search</button>
+      <a href="#" class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+      </a>
       </div>
       <div id="avatar-action-container">
         <a href="./login.html" class="btn-signin">Sign In</a>
@@ -202,6 +207,7 @@
 
   <script type="module" src="./scripts/config.js"></script>
   <script type="module" src="./scripts/home.js"></script>
+  <script type="module" src="./scripts/cart.js"></script>
   <script src="./scripts/carousel.js"></script>
 </body>
 
