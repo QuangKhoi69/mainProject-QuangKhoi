@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./styles/shoppingcart.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="./index.html" class="logo-container">
+            <img src="./assets/logo.png" alt="Logo" />
+            <span>Business Central Center</span>
+        </a>
+        <nav class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./products.html">Products</a>
+            <a href="./businesses.html">Businesses</a>
+            <a href="./support.html">Support</a>
+            <a href="./shoppingcart.html">Cart</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div id="avatar-action-container">
+                <a href="./login.html" class="btn-signin">Sign In</a>
+                <a href="#" class="btn-signout" style="display: none;">Sign Out</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div class="cart-content">
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax (10%):</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/shoppingcart.js"></script>
+</body>
+</html>

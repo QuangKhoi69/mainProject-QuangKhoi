@@ -13,7 +13,6 @@ function getProductFromLocalStorage() {
   }
   return null;
 }
-
 // Fetch product details
 async function fetchProductDetails() {
   try {
