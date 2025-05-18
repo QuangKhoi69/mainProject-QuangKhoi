@@ -1,0 +1,172 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.carousel-slide:first-child {
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  text-align: center;
+}
+
+.slide-content h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Controls */
+.carousel-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Arrow controls */
+.carousel-arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+  left: 20px;
+}
+
+.carousel-button.next {
+  right: 20px;
+}
+
+/* Show arrows on hover */
+.carousel:hover .carousel-arrows label {
+  opacity: 1;
+}
+
+/* Slide transitions */
+#slide1:checked ~ .carousel-slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-slides {
+  transform: translateX(-20%);
+}
+
+#slide3:checked ~ .carousel-slides {
+  transform: translateX(-40%);
+}
+
+#slide4:checked ~ .carousel-slides {
+  transform: translateX(-60%);
+}
+
+#slide5:checked ~ .carousel-slides {
+  transform: translateX(-80%);
+}
+
+/* Active dot */
+#slide1:checked ~ .carousel-controls label:nth-child(1),
+#slide2:checked ~ .carousel-controls label:nth-child(2),
+#slide3:checked ~ .carousel-controls label:nth-child(3),
+#slide4:checked ~ .carousel-controls label:nth-child(4),
+#slide5:checked ~ .carousel-controls label:nth-child(5) {
+  background: white;
+}
+
+/* Auto-play animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-20%); }
+  45% { transform: translateX(-20%); }
+  50% { transform: translateX(-40%); }
+  70% { transform: translateX(-40%); }
+  75% { transform: translateX(-60%); }
+  95% { transform: translateX(-60%); }
+  100% { transform: translateX(-80%); }
+}
+
+.carousel-slides {
+  animation: slide 20s infinite;
+}
+
+/* Pause animation on hover */
+.carousel:hover .carousel-slides {
+  animation-play-state: paused;
+} 

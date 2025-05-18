@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Business Central Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <div class="settings-sidebar">
+            <div class="user-profile">
+                <img src="./assets/default-avatar.png" alt="Profile Picture" id="profile-picture">
+                <h3 id="user-name">Loading...</h3>
+                <p id="user-email">Loading...</p>
+            </div>
+            <nav class="settings-nav">
+                <button class="nav-item active" data-section="profile">
+                    <i class="fas fa-user"></i> Profile
+                </button>
+                <button class="nav-item" data-section="privacy">
+                    <i class="fas fa-shield-alt"></i> Privacy
+                </button>
+                <button class="nav-item" data-section="security">
+                    <i class="fas fa-lock"></i> Security
+                </button>
+                <button class="nav-item" data-section="customization">
+                    <i class="fas fa-paint-brush"></i> Customization
+                </button>
+            </nav>
+        </div>
+
+        <div class="settings-content">
+            <!-- Profile Section -->
+            <section id="profile" class="settings-section active">
+                <h2>Profile Information</h2>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="display-name">Display Name</label>
+                        <input type="text" id="display-name" name="display-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-picture-upload">Profile Picture</label>
+                        <input type="file" id="profile-picture-upload" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn-save">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Privacy Section -->
+            <section id="privacy" class="settings-section">
+                <h2>Privacy Settings</h2>
+                <div class="privacy-options">
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Profile Visibility</h3>
+                            <p>Control who can see your profile information</p>
+                        </div>
+                        <select id="profile-visibility">
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                            <option value="connections">Connections Only</option>
+                        </select>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Activity Status</h3>
+                            <p>Show when you're active on the platform</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="activity-status">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-info">
+                            <h3>Data Collection</h3>
+                            <p>Allow us to collect usage data to improve your experience</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="data-collection">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Section -->
+            <section id="security" class="settings-section">
+                <h2>Security Settings</h2>
+                <div class="security-options">
+                    <div class="security-item">
+                        <h3>Change Password</h3>
+                        <form id="password-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" name="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password">
+                            </div>
+                            <button type="submit" class="btn-save">Update Password</button>
+                        </form>
+                    </div>
+                    <div class="security-item">
+                        <h3>Two-Factor Authentication</h3>
+                        <p>Add an extra layer of security to your account</p>
+                        <button id="enable-2fa" class="btn-secondary">Enable 2FA</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customization Section -->
+            <section id="customization" class="settings-section">
+                <h2>Personal Customization</h2>
+                <div class="customization-options">
+                    <div class="customization-item">
+                        <h3>Theme</h3>
+                        <div class="theme-options">
+                            <button class="theme-btn" data-theme="light">Light</button>
+                            <button class="theme-btn" data-theme="dark">Dark</button>
+                            <button class="theme-btn" data-theme="system">System</button>
+                        </div>
+                    </div>
+                    <div class="customization-item">
+                        <h3>Language</h3>
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                        </select>
+                    </div>
+                    <div class="customization-item">
+                        <h3>Notifications</h3>
+                        <div class="notification-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="email-notifications">
+                                Email Notifications
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="push-notifications">
+                                Push Notifications
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./scripts/settings.js"></script>
+</body>
+</html>

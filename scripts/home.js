@@ -49,3 +49,14 @@ document.head.insertAdjacentHTML('beforeend', `
     }
   </style>
 `);
+
+const starterPricingButton = document.getElementById('starter-pricing');
+const proPricingButton = document.getElementById('pro-pricing');
+
+starterPricingButton.addEventListener('click', () => {
+  alert('Starter plan selected. Are you sure you want to pay $99?');
+});
+
+proPricingButton.addEventListener('click', () => {
+  alert('Pro plan selected. Are you sure you want to pay $199?');
+});

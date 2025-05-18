@@ -17,11 +17,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: white;
-  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
 body::before {
@@ -38,9 +36,9 @@ body::before {
 
 /* Navbar styling */
 .navbar {
-  background-color: var(--white);
-  padding: 0.5rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,22 +71,23 @@ body::before {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav-links a {
+  color: #333;
+  text-decoration: none;
   font-weight: 500;
-  position: relative;
+  transition: color 0.3s ease;
 }
 
-.nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--primary-green);
+.nav-links a:hover {
+  color: #2ecc71;
+}
+
+.nav-links a.active {
+  color: #2ecc71;
+  border-bottom: 2px solid #2ecc71;
 }
 
 .search-container {
@@ -106,41 +105,43 @@ body::before {
   padding-right: 10px;
 }
 
+/* Introduction section */
 .introduction-section {
-  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  padding: 6rem 2rem;
   text-align: center;
-  background-color: var(--primary-green);
-  color: var(--white);
+  color: white;
+}
+
+.introduction-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn-started {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: #2ecc71;
   text-decoration: none;
-  color: var(--white);
-  background-color: lightgreen;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 2rem;
-  transition: background-color 0.3s ease;
 }
 
 .btn-started:hover {
-  background-color: var(--primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer styling */
 footer {
-  background-color: var(--primary-green);
-  color: var(--white);
-  padding: 2rem;
+  background-color: #2c3e50;
+  color: white;
+  padding: 3rem 2rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
 footer div {
@@ -152,13 +153,14 @@ footer div {
 }
 
 footer a {
-  color: var(--white);
+  color: white;
   font-size: 1.5rem;
+  margin: 0 0.5rem;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--primary-blue);
+  color: #2ecc71;
 }
 
 /* Main content styling */
@@ -168,7 +170,8 @@ main {
 }
 
 .features-section {
-  padding: 4rem 0;
+  padding: 5rem 2rem;
+  background-color: white;
 }
 
 .features-section h2 {
@@ -180,27 +183,30 @@ main {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-card {
-  background-color: var(--light-gray);
+  background: white;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card i {
   font-size: 2.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1rem;
+  color: #2ecc71;
+  margin-bottom: 1.5rem;
 }
 
 .feature-card h3 {
@@ -238,8 +244,8 @@ main {
 
 /* Testimonials Section */
 .testimonials-section {
-  padding: 4rem 2rem;
-  background-color: var(--light-gray);
+  background-color: #f8f9fa;
+  padding: 5rem 2rem;
 }
 
 .testimonials-section h2 {
@@ -258,11 +264,16 @@ main {
 }
 
 .testimonial-card {
-  background: var(--white);
+  background: white;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
 }
 
 .testimonial-card img {
@@ -291,7 +302,8 @@ main {
 
 /* Updated Pricing Section - More Compact */
 .pricing-section {
-  padding: 2rem;
+  padding: 5rem 2rem;
+  background-color: white;
 }
 
 .pricing-section h2 {
@@ -303,24 +315,24 @@ main {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .pricing-card {
-  background: var(--white);
-  padding: 1.5rem;
-  border-radius: 8px;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
 .pricing-card.popular {
-  border: 2px solid var(--primary-green);
-  transform: scale(1.02);
+  transform: scale(1.05);
+  border: 2px solid #2ecc71;
 }
 
 .popular-badge {
@@ -370,8 +382,17 @@ main {
 }
 
 .pricing-card .btn {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card .btn:hover {
+  background-color: #27ae60;
 }
 
 /* Responsive adjustments */
@@ -397,13 +418,18 @@ main {
     display: none;
   }
   
-  .pricing-card.popular {
-    transform: none;
+  .introduction-section h1 {
+    font-size: 2.5rem;
   }
   
+  .features-grid,
+  .testimonials-grid,
   .pricing-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-card.popular {
+    transform: none;
   }
 }
 

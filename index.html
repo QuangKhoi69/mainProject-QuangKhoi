@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="./styles/main.css"/>
   <link rel="stylesheet" href="./styles/home.css"/>
   <link rel="stylesheet" href="./styles/cart.css"/>
+  <link rel="stylesheet" href="./styles/carousel.css"/>
 
 </head>
 
@@ -48,10 +49,7 @@
       <a href="./support.html">Support</a>
       <a href="./shoppingcart.html">Cart</a>
       <button onclick="window.location.href='./search.html'" class="fa-solid fa-magnifying-glass">Search</button>
-      <a href="#" class="cart-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="cart-count">0</span>
-      </a>
+      <button onclick="window.location.href='./settings.html'" class="fa-solid fa-gear">Settings</button>
       </div>
       <div id="avatar-action-container">
         <a href="./login.html" class="btn-signin">Sign In</a>
@@ -105,19 +103,19 @@
       <h2>What Our Clients Say</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <img src="./assets/avatar1.jpg" alt="Client 1">
+          <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="Client 1">
           <p>"Outstanding service! They helped our business grow by 200% in just 6 months."</p>
           <h4>John Smith</h4>
           <span>CEO, Tech Solutions</span>
         </div>
         <div class="testimonial-card">
-          <img src="./assets/avatar2.jpg" alt="Client 2">
+          <img src="https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" alt="Client 2">
           <p>"The consulting services provided were invaluable to our expansion strategy."</p>
           <h4>Sarah Johnson</h4>
           <span>Director, Global Innovations</span>
         </div>
         <div class="testimonial-card">
-          <img src="./assets/avatar3.jpg" alt="Client 3">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfHu4OduJVzg13CZfoDgV0mdW_Ay9UiUdNIw&s" alt="Client 3">
           <p>"Professional team with excellent insights. Highly recommended!"</p>
           <h4>Michael Chen</h4>
           <span>Founder, StartUp Inc</span>
@@ -128,17 +126,43 @@
     <div class="carousel">
       <div class="carousel-container">
         <div class="carousel-slide">
-          <img src="#" alt="Slide 1">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" alt="Business Meeting">
+          <div class="slide-content">
+            <h3>Business Growth</h3>
+            <p>Transform your business with our expert solutions</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <img src="#" alt="Slide 2">
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000" alt="Team Collaboration">
+          <div class="slide-content">
+            <h3>Team Collaboration</h3>
+            <p>Build stronger teams with our management tools</p>
+          </div>
         </div>
         <div class="carousel-slide">
-          <img src="#" alt="Slide 3">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000" alt="Global Business">
+          <div class="slide-content">
+            <h3>Global Reach</h3>
+            <p>Expand your business worldwide</p>
+          </div>
         </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000" alt="Innovation">
+          <div class="slide-content">
+            <h3>Innovation</h3>
+            <p>Stay ahead with cutting-edge solutions</p>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" alt="Success">
+          <div class="slide-content">
+            <h3>Success Stories</h3>
+            <p>Join our growing list of successful clients</p>
+          </div>
+        </div>
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
       </div>
-      <button class="carousel-button prev">&#10094;</button>
-      <button class="carousel-button next">&#10095;</button>
     </div>
 
     <section class="pricing-section">
@@ -152,7 +176,7 @@
             <li><i class="fa-solid fa-check"></i>5 Users</li>
             <li><i class="fa-solid fa-check"></i>Analytics</li>
           </ul>
-          <a href="#" class="btn">Start</a>
+          <a href="#" class="btn" id="starter-pricing">Start</a>
         </div>
         <div class="pricing-card popular">
           <div class="popular-badge">Popular</div>
@@ -163,7 +187,7 @@
             <li><i class="fa-solid fa-check"></i>15 Users</li>
             <li><i class="fa-solid fa-check"></i>Advanced Tools</li>
           </ul>
-          <a href="#" class="btn">Start</a>
+          <a href="#" class="btn" id="pro-pricing">Start</a>
         </div>
         <div class="pricing-card">
           <h3>Enterprise</h3>
@@ -209,7 +233,7 @@
   <script type="module" src="./scripts/config.js"></script>
   <script type="module" src="./scripts/home.js"></script>
   <script type="module" src="./scripts/cart.js"></script>
-  <script src="./scripts/carousel.js"></script>
+  <script src="./scripts/auth.js"></script>
 </body>
 
 </html>

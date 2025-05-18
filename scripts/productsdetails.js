@@ -68,3 +68,42 @@ document.getElementById('transaction-form').addEventListener('submit', function(
 
 // Initialize page
 fetchProductDetails();
+selectedProduct.products.forEach(product => {
+  const listItem = document.createElement('li');
+  listItem.innerHTML = `
+    <strong>${product.name}</strong><br>
+    Price: $${product.price.toLocaleString()}<br>
+    Rating: ${product.rating}<br>
+    Description: ${product.description}
+  `;
+  productsList.appendChild(listItem);
+});
+
+//Handle Transactions
+
+// Handle form submission
+document.getElementById('transaction-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const paymentMethod = document.getElementById('payment').value;
+    
+    // Create cart item
+    const cartItem = {
+        name: selectedProduct.name,
+        price: selectedProduct.price,
+        email: email,
+        address: address,
+        paymentMethod: paymentMethod
+    };
+    
+    // Add to cart
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(cartItem);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Redirect to shopping cart
+    window.location.href = 'shoppingcart.html';
+});

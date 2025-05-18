@@ -9,7 +9,7 @@
   <body>
     <div class="form-wrapper">
       <h2>Sign In</h2>
-      <form id="login-form">
+      <form id="login-form" onsubmit="return false;">
         <div class="form-control">
           <input id="email" type="email" required />
           <label>Email address</label>
@@ -30,6 +30,6 @@
       <p>New to Business Central Center? <a href="./register.html">Sign up now</a></p>
     </div>
 
-    <script type="module" src="./scripts/login.js"></script>
+    <script src="./scripts/login.js"></script>
   </body>
 </html>

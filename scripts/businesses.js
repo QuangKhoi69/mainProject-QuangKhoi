@@ -3,6 +3,7 @@ fetch('./json/companies.json')
   .then(response => response.json())
   .then(companies => {
     const businessesGrid = document.querySelector('.businesses-grid');
+    const searchInput = document.getElementById('search-input');
 
     // Function to display companies
     const displayCompanies = (companies) => {
@@ -33,8 +34,21 @@ fetch('./json/companies.json')
       });
     };
 
+    const filterCompanies = (searchTerm) => {
+      const filtered = companies.filter(company => 
+        company.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        company.industry.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      displayCompanies(filtered);
+    };
+
     // Initial display
     displayCompanies(companies);
+
+    // Search functionality
+    searchInput.addEventListener('input', (e) => {
+      filterCompanies(e.target.value);
+    });
 
     // Sort by rating
     document.getElementById('sort-rating').addEventListener('click', () => {

@@ -1,5 +1,4 @@
 const register = (event) => {
-
     event.preventDefault();
     const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -43,19 +42,46 @@ const register = (event) => {
         password: password,
     };
 
-    let users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : {};
+    try {
+        // Get existing users array or create new one
+        const usersData = localStorage.getItem("users");
+        let users = [];
+        
+        if (usersData) {
+            try {
+                users = JSON.parse(usersData);
+                if (!Array.isArray(users)) {
+                    console.error("Users data is not in the expected format");
+                    users = [];
+                }
+            } catch (error) {
+                console.error("Error parsing users data:", error);
+                users = [];
+            }
+        }
+        
+        // Check if email already exists
+        if (users.some(u => u.email === email)) {
+            alert("Email already registered");
+            return;
+        }
 
-    if (users[username] ) {
-        alert("Username already exists");
-        return;
-    } else {
-        users[username] = user;
+        // Add new user to array
+        users.push(user);
         localStorage.setItem("users", JSON.stringify(users));
+        
         alert("Registration successful");
         window.location.href = "./index.html";
+    } catch (error) {
+        console.error("Error during registration:", error);
+        alert("An error occurred during registration. Please try again.");
     }
-    }
+};
 
-document.querySelector(".btn-signup").addEventListener('click', event => {
-    register(event);
+// Add event listener to form
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', register);
+    }
 });
